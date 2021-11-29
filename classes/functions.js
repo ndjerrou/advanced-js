@@ -176,5 +176,5 @@ function pythagore2(a, b, nature = "quelconque", unit = "cm") {
 console.log(pythagore2(a, b, "rectangle", "km"));
 console.log(pythagore2(a, b, "rectangle", "m"));
 console.log(pythagore2(a, b, "rectangle", "mm"));
-console.log(pythagore2(a, b, "quelconque", "mm"));
+console.log(pythagore2(a, b, "quelconque", "dm"));
 console.log(pythagore2(a, b, undefined, "mm"));
