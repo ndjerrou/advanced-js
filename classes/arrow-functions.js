@@ -1,4 +1,7 @@
-// regular function
+// Regular function
+
+import { pythagore } from "./pythagore.js";
+import { pythagore2 } from "./pythagorev2.js";
 
 function multiply(a, b) {
   return a * b;
@@ -18,8 +21,26 @@ const multiply1 = (a, b) => {
 // Récupérer l'évènement submit du formulaire pour calculer l'hypothénuse (si c'est possible et si le triangle est rectangle)
 
 const form = document.querySelector("form");
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  alert(e.target.elements.prenom.value);
-  alert(e.target.elements.age.value);
+
+  //getting the data input from the user
+
+  // getting the inputs elements
+
+  //   const ab = e.target.elements.firstSide;
+  //   const bc = e.target.elements.secondSide;
+
+  // getting the inputs elements Value
+  const ab = e.target.elements.firstSide.value;
+  const bc = e.target.elements.secondSide.value;
+
+  const units = document.getElementsByName("units");
+
+  const hyp = pythagore2(ab, bc, "rectangle", units[0].value, units[1].value);
+
+  const box = document.querySelector(".box");
+
+  box.textContent = hyp + " cm";
 });
