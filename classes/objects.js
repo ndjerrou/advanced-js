@@ -26,12 +26,12 @@ console.log(nissim.age);
 console.log(nissim);
 
 // Freeze an object
-const nissimRobot = Object.freeze(nissim);
-console.log(nissimRobot);
-console.log(nissimRobot.status);
+// const nissimRobot = Object.freeze(nissim);
+// console.log(nissimRobot);
+// console.log(nissimRobot.status);
 
-// Impossible to modify any property dûe to the freeze
-//nissimRobot.status = "robot";
+// // Impossible to modify any property dûe to the freeze
+// nissimRobot.status = "robot";
 
 // loop into the keys of my object
 for (let key in nissim) {
@@ -45,3 +45,20 @@ console.log(keys);
 // Gett all of the values at once : obj --> array
 const values = Object.values(nissim);
 console.log(values);
+
+// Add properties to our object - 2 ways
+
+// 1st method - classical one
+nissim.localisationWork = "remotely";
+console.log(nissim);
+
+// 2nd method - with the [] operator
+nissim["smartphone"] = "xiaomi";
+console.log(nissim);
+// or
+const device = "smartphone2";
+// attention à la différence entre l'opérateur . et l'opéateur []
+nissim.device = "samsung";
+//add dynamically a property to our object
+nissim[device] = "samsung"; //Pareil que nissim.smartphone2 = "samsung"
+console.log(nissim);
