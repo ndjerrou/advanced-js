@@ -4,17 +4,75 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pythagore</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
   </head>
+  <link rel="stylesheet" href="index.css" />
   <body>
-    <form>
-      <div>
-        <label for="">Prenom :<input name="prenom" /></label>
-      </div><div></div>
-      <label for="">Age :<input type="number" name="age" /></label></div>
-      <div></div><input type="checkbox" name="isMajor" required/> <label>Majeur ?</label></div>
-      <div><button>Valider mes informations</button></div>
-    </form>
+    <div class="container">
+      <section class="hero is-info">
+        <div class="hero-body">
+          <p class="title">Outil de calcul d'une hypothénuse</p>
+          <p class="subtitle">Dans le cas d'un triangle rectangle</p>
+        </div>
+      </section>
+      <form>
+        <div class="field">
+          <label class="label" for="">Premier côté</label>
+          <div class="field has-addons">
+            <p class="control">
+              <span class="select">
+                <select>
+                  <option>km</option>
+                  <option>m</option>
+                  <option>cm</option>
+                  <option>mm</option>
+                </select>
+              </span>
+            </p>
+            <p class="control">
+              <input
+                name="firstSide"
+                class="input"
+                type="text"
+                placeholder="Mesure du côté"
+              />
+            </p>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="">Deuxième côté</label>
+          <div class="field has-addons">
+            <p class="control">
+              <span class="select">
+                <select>
+                  <option>km</option>
+                  <option>m</option>
+                  <option>cm</option>
+                  <option>mm</option>
+                </select>
+              </span>
+            </p>
+            <p class="control">
+              <input
+                name="firstSide"
+                class="input"
+                type="text"
+                placeholder="Mesure du côté"
+              />
+            </p>
+          </div>
+        </div>
+        <div>
+          <button class="button is-info is-outlined">
+            Calculer l'hypothénuse
+          </button>
+        </div>
+      </form>
+    </div>
     <script src="./classes/arrow-functions.js"></script>
   </body>
 </html>
