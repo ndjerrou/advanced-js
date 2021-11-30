@@ -1,7 +1,6 @@
 // Regular function
 
-import { pythagore } from "./pythagore.js";
-import { pythagore2 } from "./pythagorev2.js";
+import pythagore2 from "./pythagorev2.js";
 
 function multiply(a, b) {
   return a * b;
@@ -22,7 +21,8 @@ const multiply1 = (a, b) => {
 
 const form = document.querySelector("form");
 
-form.addEventListener("submit", function (e) {
+// callback - event handler
+form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   //getting the data input from the user
@@ -44,3 +44,27 @@ form.addEventListener("submit", function (e) {
 
   box.textContent = hyp + " cm";
 });
+
+// Few tips about arrow functions
+
+// When there is only one argument --> escape ()
+function isGraduated(mark) {
+  return mark > 11 ? "Félicitations !" : "Rattrapages..";
+}
+
+const isGraduated1 = (mark) => {
+  return mark > 11 ? "Félicitations !" : "Rattrapages..";
+};
+
+console.log(isGraduated1(2));
+
+// When we want to return immediately
+const isGraduated2 = (mark) =>
+  mark > 11 ? "Félicitations !" : "Rattrapages..";
+
+console.log(isGraduated2(2));
+
+// When we want to return immediately with an object - open parentheseis
+const welcomeSolacroup = () => ({ studentCard: true, matricule: "FFXXKI" });
+
+console.log(welcomeSolacroup());

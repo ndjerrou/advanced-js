@@ -1,10 +1,4 @@
-export function pythagore2(
-  a,
-  b,
-  nature = "quelconque",
-  unitA = "cm",
-  unitB = "cm"
-) {
+export default (a, b, nature = "quelconque", unitA = "cm", unitB = "cm") => {
   if (nature.toLowerCase() === "rectangle") {
     let cCarre = 0;
     let c = 0;
@@ -52,4 +46,4 @@ export function pythagore2(
     }
   }
   return "Le triangle doit être rectangle !";
-}
+};
