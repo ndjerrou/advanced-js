@@ -1,5 +1,14 @@
-form {
-  padding: 20px;
+ul {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  padding: 5px;
+  border-color: tomato;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=index.236fd539.css.map */
