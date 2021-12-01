@@ -107,7 +107,7 @@ const dispPhotographers = (photographers, node) => {
 dispPhotographers(photographers, document.querySelector(".photographers"));
 
 // Define this function
-const filterPhotographersByTag = 
+const filterPhotographersByTag = // 
 
 
 const addClickToTags = () => {
