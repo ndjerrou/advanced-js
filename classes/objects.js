@@ -120,13 +120,13 @@ const dog1 = {
 dog1.aboyer();
 
 // Destructuring
-import data from "../data.json";
+// import data from "../data.json";
 
 // const photographers = data.photographers;
 
 // or with destructuring
 
-const { photographers } = data;
+// const { photographers } = data;
 
 // Explanation :
 
@@ -144,4 +144,16 @@ const solaClass = {
   sizeCampus: 30000
 };
 
-// Destructure the properties city, postalCode and address
+// Exercice - Destructure the properties city, postalCode and address
+
+// const { localisation } = solaClass;
+// const { city, postalCode, address } = localisation;
+
+// or similary ...
+const {
+  localisation: { city, postalCode, address }
+} = solaClass;
+
+console.log(city);
+console.log(postalCode);
+console.log(address);

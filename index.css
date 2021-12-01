@@ -3,7 +3,8 @@ ul {
   justify-content: center;
 }
 
-li {
+li,
+.tag {
   padding: 5px;
   border-color: tomato;
   border-width: 1px;

@@ -88,7 +88,7 @@ const dispPhotographers = (photographers, node) => {
     // `;
     const tags = `${photographer.tags
       .map((tag) => {
-        return `<span>${tag}</span>`;
+        return `<span class="tag">${tag}</span>`;
       })
       .join(" ")}`; // join : array => string concaténée
 
@@ -105,3 +105,22 @@ const dispPhotographers = (photographers, node) => {
 };
 
 dispPhotographers(photographers, document.querySelector(".photographers"));
+
+// Define this function
+const filterPhotographersByTag = 
+
+
+const addClickToTags = () => {
+  // const ul = document.querySelector("ul");
+  const { children } = document.querySelector("ul");
+
+  for (let i = 0; i < children.length; i++) {
+    const li = children[i];
+
+    li.addEventListener("click", (e) => {
+       filterPhotographersByTag(photographers, e.target.textContent);
+    });
+  }
+};
+
+addClickToTags();
