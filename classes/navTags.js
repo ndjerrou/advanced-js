@@ -1,5 +1,6 @@
 import data from "../data.json";
 
+const photographers = data.photographers;
 const tagsPhotographers = [];
 
 // [tags] ==> {tag1: ..., tag2: ..., }
@@ -74,4 +75,33 @@ dispTags(uniqueTagsArray, document.querySelector("ul"));
 
 // 2 - le noeud sur lequel on va injecter notre html depuis le js
 
-const dispPhotographers = (photographers, node) => {};
+const dispPhotographers = (photographers, node) => {
+  node.innerHTML = "";
+  photographers.forEach((photographer) => {
+    console.log(photographer);
+    //     node.innerHTML =
+    //       node.innerHTML +
+    //       `
+    //   <article>
+    //     <h4>${photographer.name}</h4>
+    //   </article>
+    // `;
+    const tags = `${photographer.tags
+      .map((tag) => {
+        return `<span>${tag}</span>`;
+      })
+      .join(" ")}`; // join : array => string concaténée
+
+    node.innerHTML += `
+      <article>
+        <h4>${photographer.name}</h4>
+        <p>${photographer.country}</p>
+        <p>${photographer.tagline}</p>
+        <p>${photographer.price}€/jour</p>
+        ${tags}
+      </article>
+    `;
+  });
+};
+
+dispPhotographers(photographers, document.querySelector(".photographers"));

@@ -10,3 +10,19 @@ li {
   border-style: solid;
   border-radius: 10px;
 }
+
+main {
+  margin-top: 40px;
+  height: 100vh;
+}
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  width: 300px;
+  padding: 25px;
+}
