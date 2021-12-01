@@ -45,7 +45,7 @@ dispTags(uniqueTagsArray, document.querySelector("ul"));
 //   dispTags1(tag, document.querySelector("ul"));
 // }
 
-const dispPhotographers = (photographers, node) => {};
+// ------------------------------------------------------------ //
 
 // IN case we wanna display an array through innerHTML
 
@@ -61,3 +61,17 @@ const dispPhotographers = (photographers, node) => {};
 // ${obj.hobbies.map((hobbi) => {
 //   return `<span>${hobbi}</span>`;
 // })}`;
+
+// ------------------------------------------------------------ //
+
+// Exercice
+
+// Afficher nos photographers à l'aide de la fn dispPhotographers
+
+// dispPhotographers prend deux arguments :
+
+// 1 - un tableau de photographes
+
+// 2 - le noeud sur lequel on va injecter notre html depuis le js
+
+const dispPhotographers = (photographers, node) => {};
