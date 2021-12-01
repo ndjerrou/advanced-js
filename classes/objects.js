@@ -64,7 +64,6 @@ nissim[device] = "samsung"; //Pareil que nissim.smartphone2 = "samsung"
 console.log(nissim);
 
 // methods on objects
-
 const dog = {
   race: "Bethoven",
   name: "Flexi",
@@ -76,4 +75,46 @@ const dog = {
 
 console.log(dog.name);
 console.log(dog.age);
-console.log(dog.aboyer()); //we call the method aboyer on the object dog
+dog.aboyer(); //we call the method aboyer on the object dog
+
+// Short-hands syntax for properties
+const createDogs = (race, name, age, aboyer) => {
+  return {
+    race: race,
+    name: name,
+    age: age,
+    aboyer: aboyer
+  };
+};
+
+const createDogs1 = (race, name, age, aboyer) => {
+  return {
+    race, //when the name of the property equals the same name as the variable that contains the value, we can just write the name of the property
+    name,
+    age,
+    aboyer
+  };
+};
+
+console.log(
+  createDogs("Rodveler", "Ronflex", 5, () => {
+    console.log("grrrrr");
+  })
+);
+console.log(
+  createDogs1("Dalmatien", "Simba", 3, () => {
+    console.log("Slurp slurp");
+  })
+);
+
+// Short-hands for methods
+const dog1 = {
+  race: "Bethoven",
+  name: "Flexi",
+  age: 3,
+  aboyer() {
+    console.log("waf waf");
+  }
+};
+
+dog1.aboyer();
