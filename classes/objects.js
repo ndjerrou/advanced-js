@@ -62,3 +62,18 @@ nissim.device = "samsung";
 //add dynamically a property to our object
 nissim[device] = "samsung"; //Pareil que nissim.smartphone2 = "samsung"
 console.log(nissim);
+
+// methods on objects
+
+const dog = {
+  race: "Bethoven",
+  name: "Flexi",
+  age: 3,
+  aboyer: function () {
+    console.log("waf waf");
+  }
+}; // when a property owns a function, we say it is a method
+
+console.log(dog.name);
+console.log(dog.age);
+console.log(dog.aboyer()); //we call the method aboyer on the object dog
