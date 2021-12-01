@@ -44,3 +44,20 @@ dispTags(uniqueTagsArray, document.querySelector("ul"));
 // for (let tag in uniqueTagsObj) {
 //   dispTags1(tag, document.querySelector("ul"));
 // }
+
+const dispPhotographers = (photographers, node) => {};
+
+// IN case we wanna display an array through innerHTML
+
+// const obj = {
+//   name: "Poppy",
+//   age: 3,
+//   hobbies: ["run", "pup", "eat"]
+// };
+
+// document.body.innerHTML = `
+// <p>${obj.name}</p>
+// <p>${obj.age}</p>
+// ${obj.hobbies.map((hobbi) => {
+//   return `<span>${hobbi}</span>`;
+// })}`;
