@@ -118,3 +118,30 @@ const dog1 = {
 };
 
 dog1.aboyer();
+
+// Destructuring
+import data from "../data.json";
+
+// const photographers = data.photographers;
+
+// or with destructuring
+
+const { photographers } = data;
+
+// Explanation :
+
+// 1 - we create a variable named photographers
+// 2 - we extract the property photographers of the object data and we assign it to the new variable just created
+
+const solaClass = {
+  totalStudents: 15,
+  localisation: {
+    city: "Dinard",
+    postalCode: 35800,
+    address: "4, Avenue du Chateau Hébert"
+  },
+  isSport: true,
+  sizeCampus: 30000
+};
+
+// Destructure the properties city, postalCode and address
