@@ -27,5 +27,8 @@ article {
   width: 300px;
   padding: 25px;
 }
+a {
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=index.236fd539.css.map */
