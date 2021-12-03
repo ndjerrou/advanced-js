@@ -106,19 +106,39 @@ const dispPhotographers = (photographers, node) => {
 
 dispPhotographers(photographers, document.querySelector(".photographers"));
 
-// Define this function
-const filterPhotographersByTag = // 
+// Define this function which returns a filtered array
+const filterPhotographersByTag = (photographers, tag) => {
+  const filteredPhotographers = photographers.filter((photographer) => {
+    const isIncluded = photographer.tags.includes(tag);
+    return isIncluded;
+  });
 
+  return filteredPhotographers;
+};
+
+// other version of filterPhotographersByTag
+// 2 implicit returns
+const filterPhotographersByTag1 = (photographers, tag) =>
+  photographers.filter((photographer) => photographer.tags.includes(tag));
 
 const addClickToTags = () => {
   // const ul = document.querySelector("ul");
   const { children } = document.querySelector("ul");
 
   for (let i = 0; i < children.length; i++) {
+    //looping li...
     const li = children[i];
 
     li.addEventListener("click", (e) => {
-       filterPhotographersByTag(photographers, e.target.textContent);
+      const filteredPhotographers = filterPhotographersByTag(
+        photographers,
+        e.target.textContent.slice(1)
+      );
+
+      dispPhotographers(
+        filteredPhotographers,
+        document.querySelector("section")
+      );
     });
   }
 };
